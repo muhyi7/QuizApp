@@ -1,12 +1,11 @@
 package com.quizapp.ui.main
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.quizapp.R
 import com.quizapp.databinding.ActivityMainBinding
+import com.quizapp.ui.prepare.PrepareActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +21,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun onClick() {
         mainBinding.btnPlay.setOnClickListener {
-
+            val intent = Intent(this, PrepareActivity::class.java)
+            startActivity(intent)
         }
     }
 }
